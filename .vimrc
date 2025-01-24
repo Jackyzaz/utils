@@ -1,4 +1,4 @@
-ble line numbers
+# Enable line numbers
 set number
 
 " Enable relative line numbers for easier movement
