@@ -38,10 +38,22 @@ set hlsearch
 " Turn off backup files (optional, based on preference)
 set nobackup
 set noswapfile
-colorscheme darkblue
+colorscheme desert
+set termguicolors
 set fillchars=eob:\  
 set clipboard=unnamedplus
 
 " auto run python with f9
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '! clear; python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '! clear; python3' shellescape(@%, 1)<CR>
+
+" plugin
+
+call plug#begin()
+Plug 'preservim/NERDTree'
+call plug#end()
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
